@@ -1,0 +1,25 @@
+.sessions-offers { background: #e7ebc5; color: #292e1e; }
+.sessions-offers::before {
+  background: url('assets/sessions-leaf.png') 62% center / cover;
+  inset: -25px;
+  filter: blur(16px);
+  transform: scale(1.05);
+  opacity: 1;
+}
+.sessions-offers::after {
+  background: linear-gradient(110deg,rgba(248,248,224,.64),rgba(240,244,209,.4));
+  -webkit-backdrop-filter: blur(12px) saturate(85%);
+  backdrop-filter: blur(12px) saturate(85%);
+}
+.sessions-layout .session-name h3,
+.sessions-layout .session-select { color: #292e1e; }
+.sessions-layout .session-name p,
+.sessions-layout .session-detail,
+.sessions-layout .session-footnote { color: #41492f; }
+.sessions-layout .session-list article { border-bottom-color: rgba(54,64,35,.2); }
+.sessions-offers .session-select span {
+  --glass-tint: rgba(247,250,222,.3);
+  --glass-hover: rgba(247,250,222,.5);
+  --glass-ink: #292e1e;
+  text-shadow: none;
+}
