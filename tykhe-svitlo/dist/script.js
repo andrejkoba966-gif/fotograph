@@ -54,3 +54,4 @@ setupTitleReveals();
 reducedMotion.addEventListener('change', setupTitleReveals);
 const workGallery=document.querySelector('.gallery[data-active]');
 document.querySelectorAll('.work-filter [data-filter]').forEach(button=>button.addEventListener('click',()=>{document.querySelectorAll('.work-filter [data-filter]').forEach(b=>b.setAttribute('aria-pressed',String(b===button)));workGallery.dataset.active=button.dataset.filter;}));
+document.querySelectorAll('[data-to-top]').forEach(link=>link.addEventListener('click',event=>{event.preventDefault();history.replaceState(null,'',location.pathname+location.search);scrollTo({top:0,behavior:reducedMotion.matches?'auto':'smooth'});document.querySelector('.brand, a, button')?.focus({preventScroll:true});}));

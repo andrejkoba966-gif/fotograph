@@ -142,3 +142,11 @@ dialog form :is(input, select, textarea) { margin-top: 4px; transition: border-c
 dialog form :is(input, select, textarea):focus-visible { outline: none; border-bottom-color: #687631; box-shadow: 0 1px 0 #687631; }
 [data-theme="dark"] dialog form :is(input, select, textarea):focus-visible { outline: none; border-bottom-color: #dce59c; box-shadow: 0 1px 0 #dce59c; }
 dialog:has(#booking-form[hidden]) .form-intro { display: none; }
+
+/* Footer: the studio name spans the full width, lined up with the booking card above */
+footer { container-type: inline-size; padding: clamp(36px,4.5vw,64px) 26px 20px; }
+footer .footer-logo { display: block; font-size: 17.72cqw; line-height: .92; letter-spacing: -.055em; white-space: nowrap; padding-bottom: 2.6cqw; }
+html[lang="en"] footer .footer-logo { font-size: 19.42cqw; }
+@media (max-width: 700px) { footer { padding: 32px 12px 20px; } footer .footer-bottom { padding: 0 4px; } }
+@media (min-width: 1700px) { footer { padding-left: 0; padding-right: 0; } }
+footer .footer-bottom { align-items: center; }
