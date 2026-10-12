@@ -150,3 +150,8 @@ html[lang="en"] footer .footer-logo { font-size: 19.42cqw; }
 @media (max-width: 700px) { footer { padding: 32px 12px 20px; } footer .footer-bottom { padding: 0 4px; } }
 @media (min-width: 1700px) { footer { padding-left: 0; padding-right: 0; } }
 footer .footer-bottom { align-items: center; }
+
+/* One rhythm between the rounded section cards */
+.manifesto { margin-top: 80px; }
+.work-section + .photographer { margin-top: 80px; }
+@media (max-width: 700px) { .manifesto, .work-section + .photographer { margin-top: 56px; } }
