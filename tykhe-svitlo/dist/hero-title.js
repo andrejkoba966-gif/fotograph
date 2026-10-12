@@ -1,4 +1,4 @@
-// Hero title "develops" letter by letter, the first one keeps a touch of green light.
+// Hero title "develops" letter by letter.
 (function () {
   var root = document.documentElement;
   if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) root.classList.add('hero-anim');
