@@ -127,3 +127,4 @@ html .title-reveal-visible { opacity: 1; clip-path: none; animation: hero-line-r
 html .text-reveal-visible { animation: text-rise 1.6s cubic-bezier(.25,.6,.2,1) .45s both; }
 @keyframes text-rise { from { opacity: 0; transform: translateY(18px); filter: blur(6px); } to { opacity: 1; transform: none; filter: blur(0); } }
 @media (prefers-reduced-motion: reduce) { .title-reveal-pending, .text-reveal-pending { opacity: 1; } html .title-reveal-visible, html .text-reveal-visible { animation: none; } }
+@media (max-width: 700px) { .sessions-portrait figcaption p { font-size: 26px; } }
