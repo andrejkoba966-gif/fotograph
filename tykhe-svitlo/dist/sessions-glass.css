@@ -1,6 +1,6 @@
 .sessions-offers { background: #e7ebc5; color: #292e1e; }
 .sessions-offers::before {
-  background: url('assets/sessions-leaf.png') 62% center / cover;
+  background: url('assets/sessions-leaf.webp') 62% center / cover;
   inset: -25px;
   filter: blur(16px);
   transform: scale(1.05);

@@ -13,7 +13,7 @@
   position: absolute;
   inset: -65px;
   z-index: -2;
-  background: url('assets/calla.jpg') center / cover;
+  background: url('assets/calla-640.webp') center / cover;
   filter: blur(58px) brightness(1.18);
   opacity: .22;
   pointer-events: none;
