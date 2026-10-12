@@ -1,8 +1,7 @@
-// Hero title "develops" letter by letter, then a soft light passes across it.
+// Hero title "develops" letter by letter, the first one keeps a touch of green light.
 (function () {
-  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
   var root = document.documentElement;
-  root.classList.add('hero-anim');
+  if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) root.classList.add('hero-anim');
   document.addEventListener('DOMContentLoaded', function () {
     var h1 = document.getElementById('hero-title');
     var word = h1 && h1.firstChild;
