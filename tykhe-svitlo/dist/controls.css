@@ -120,7 +120,3 @@ html[lang="en"] .hero-title-wrap h1 { font-size: 14.4vw; }
 @keyframes tag-word { from { opacity: 0; transform: translateY(60%); clip-path: inset(0 0 100% 0); } to { opacity: 1; transform: none; clip-path: inset(0 0 -.2em 0); } }
 @media (max-width: 1000px) { .hero-anim .studio-tag:before { content: none; } .hero-anim .studio-tag span { display: inline-block; } }
 @media (prefers-reduced-motion: reduce) { .studio-tag, .hero-letter, .studio-tag span, .studio-tag:before { animation: none !important; } }
-
-/* First letter keeps a soft green light, as if the light falls on it */
-.hero-letter:first-child { background: linear-gradient(105deg, #a3b25e 0%, #6f7f3b 38%, var(--ink) 78%); -webkit-background-clip: text; background-clip: text; color: transparent; }
-[data-theme="dark"] .hero-letter:first-child { background-image: linear-gradient(105deg, #e3ec9f 0%, #c3cf7e 38%, var(--ink) 78%); }
