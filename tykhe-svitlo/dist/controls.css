@@ -158,6 +158,6 @@ footer .footer-bottom { align-items: center; }
 .hero-specialty .spec-tail { font-weight: inherit; white-space: nowrap; }
 @media (max-width: 1000px) { .hero-specialty, html[lang="en"] .hero-specialty { white-space: normal; } }
 /* Specialty in sentence case: calmer, a touch smaller than the caps version */
-.hero-specialty, html[lang="en"] .hero-specialty { font-size: clamp(20px, 2.4vw, 42px); letter-spacing: -.025em; }
+.hero-specialty, html[lang="en"] .hero-specialty { font-size: clamp(20px, 2.4vw, 42px); letter-spacing: -.04em; }
 @media (max-width: 1000px) { .hero-specialty, html[lang="en"] .hero-specialty { font-size: 3.6vw; } }
 @media (max-width: 700px) { .hero-specialty, html[lang="en"] .hero-specialty { font-size: 5.4vw; line-height: 1.25; } }
