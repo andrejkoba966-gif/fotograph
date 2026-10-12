@@ -131,3 +131,14 @@ html .text-reveal-visible { animation: text-rise 1.6s cubic-bezier(.25,.6,.2,1) 
 .contact h2 span { color: #5d6940; }
 [data-theme="dark"] .contact h2 span { color: #b9c48f; }
 @media (max-width: 700px) { .contact h2 { font-size: 10.5vw; } }
+
+/* Booking form: clearer spacing; focus shows on the field's underline instead of an outline box over the label */
+dialog h2 span { color: var(--muted); }
+.form-intro { font-size: 16px; line-height: 1.55; margin: -6px 0 6px; color: #5d634f; }
+[data-theme="dark"] .form-intro { color: #c9d0b8; }
+dialog form label { margin-top: 22px; }
+dialog form label .optional { color: var(--muted); }
+dialog form :is(input, select, textarea) { margin-top: 4px; transition: border-color .2s, box-shadow .2s; }
+dialog form :is(input, select, textarea):focus-visible { outline: none; border-bottom-color: #687631; box-shadow: 0 1px 0 #687631; }
+[data-theme="dark"] dialog form :is(input, select, textarea):focus-visible { outline: none; border-bottom-color: #dce59c; box-shadow: 0 1px 0 #dce59c; }
+dialog:has(#booking-form[hidden]) .form-intro { display: none; }
