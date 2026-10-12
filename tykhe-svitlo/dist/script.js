@@ -46,3 +46,5 @@ function setupTitleReveals() {
 }
 setupTitleReveals();
 reducedMotion.addEventListener('change', setupTitleReveals);
+const workGallery=document.querySelector('.gallery[data-active]');
+document.querySelectorAll('.work-filter [data-filter]').forEach(button=>button.addEventListener('click',()=>{document.querySelectorAll('.work-filter [data-filter]').forEach(b=>b.setAttribute('aria-pressed',String(b===button)));workGallery.dataset.active=button.dataset.filter;}));
