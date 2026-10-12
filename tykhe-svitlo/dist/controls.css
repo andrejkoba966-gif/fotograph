@@ -67,3 +67,25 @@ a:focus-visible, button:focus-visible {
 
 /* Hero caption now holds only the "scroll" link — keep it on the right */
 .hero-caption { justify-content: flex-end; }
+
+/* Hero: studio badge overlapping the title + one-line specialty */
+.hero-title-wrap { position: relative; }
+.studio-badge {
+  position: absolute; z-index: 2; margin: 0;
+  right: 3.5%; bottom: 4%;
+  padding: 12px 22px; border-radius: 40px;
+  background: var(--lime); color: #2b301b;
+  font-size: clamp(11px, 1.15vw, 17px); font-weight: 650; letter-spacing: .1em; white-space: nowrap;
+  transform: rotate(-4deg);
+  box-shadow: 0 10px 28px rgba(41,46,30,.18);
+  animation: studio-badge-in .9s cubic-bezier(.2,.7,.2,1) 1.5s both;
+}
+@keyframes studio-badge-in { from { opacity: 0; transform: rotate(-4deg) translateY(10px) scale(.94); } to { opacity: 1; transform: rotate(-4deg); } }
+.hero-specialty { font-size: clamp(24px, 3.75vw, 62px); }
+html[lang="en"] .hero-specialty { font-size: clamp(22px, 3.45vw, 58px); }
+@media (max-width: 1000px) { .hero-specialty { font-size: 4.9vw; } html[lang="en"] .hero-specialty { font-size: 4.5vw; } }
+@media (max-width: 700px) {
+  .studio-badge { right: 0; bottom: -16%; padding: 8px 14px; font-size: 10px; letter-spacing: .08em; }
+  .hero-specialty, html[lang="en"] .hero-specialty { white-space: normal; font-size: 6.4vw; line-height: 1.18; }
+}
+@media (prefers-reduced-motion: reduce) { .studio-badge { animation: none; } }
