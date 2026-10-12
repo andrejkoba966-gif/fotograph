@@ -155,3 +155,5 @@ footer .footer-bottom { align-items: center; }
 .manifesto { margin-top: 80px; }
 .work-section + .photographer { margin-top: 80px; }
 @media (max-width: 700px) { .manifesto, .work-section + .photographer { margin-top: 56px; } }
+.hero-specialty .spec-tail { font-weight: inherit; white-space: nowrap; }
+@media (max-width: 1000px) { .hero-specialty, html[lang="en"] .hero-specialty { white-space: normal; } }
