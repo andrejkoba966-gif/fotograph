@@ -110,8 +110,8 @@
 .work-filter button[aria-pressed="true"] { background: #2f3a24; border-color: #2f3a24; color: #fafbef; }
 [data-theme="dark"] .work-filter button { color: #e5ead5; background: rgba(233,242,201,.08); border-color: rgba(233,242,201,.18); }
 [data-theme="dark"] .work-filter button[aria-pressed="true"] { background: #dce59c; border-color: #dce59c; color: #22291a; }
-.gallery figcaption span:last-child { order: -1; font-size: 11px; letter-spacing: .1em; opacity: .85; }
-.gallery figcaption { gap: 6px; }
+.gallery figcaption { gap: 5px; }
+.gallery figcaption span:last-child { font-size: clamp(13px,1vw,15px); letter-spacing: 0; line-height: 1.4; opacity: .82; }
 /* Filtered view: an even grid of the chosen format */
 .gallery:not([data-active="all"]) { grid-template-columns: repeat(3,minmax(0,1fr)); grid-template-rows: none; }
 .gallery:not([data-active="all"]) figure:nth-child(n) { grid-column: auto; grid-row: auto; }

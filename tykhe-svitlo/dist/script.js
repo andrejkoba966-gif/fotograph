@@ -21,27 +21,33 @@ let brief='';form.addEventListener('submit',event=>{event.preventDefault();const
 document.querySelector('#download-brief').addEventListener('click',()=>{const url=URL.createObjectURL(new Blob(['\uFEFF'+brief],{type:'text/plain;charset=utf-8'}));const link=document.createElement('a');link.href=url;link.download='tykhe-svitlo-brief.txt';link.click();setTimeout(()=>URL.revokeObjectURL(url),1000);});
 document.querySelector('#edit-brief').addEventListener('click',()=>{form.hidden=false;result.hidden=true;form.elements.name.focus();});
 // Reveal each section title once as it enters the viewport. Content stays visible without JS.
-const sectionTitles = [...document.querySelectorAll('#work-title, #sessions-title, .footer-logo')];
+const sectionTitles = [...document.querySelectorAll('#work-title, #marta-title, #sessions-title, #contact-title, .footer-logo')];
+const sectionTexts = [...document.querySelectorAll('.work-section .section-heading p, .photographer-lead, .sessions .section-heading p, .contact-content > p')];
+const revealClass = el => sectionTexts.includes(el) ? 'text-reveal' : 'title-reveal';
 let titleObserver;
 function setupTitleReveals() {
   titleObserver?.disconnect();
+  const items = [...sectionTitles, ...sectionTexts];
   if (reducedMotion.matches || !('IntersectionObserver' in window)) {
-    sectionTitles.forEach(title => title.classList.remove('title-reveal-pending', 'title-reveal-visible'));
+    items.forEach(el => el.classList.remove('title-reveal-pending', 'title-reveal-visible', 'text-reveal-pending', 'text-reveal-visible'));
     return;
   }
+  // Fire once the element is a quarter of the way up the screen, so the reveal is actually seen.
   titleObserver = new IntersectionObserver(entries => {
     entries.forEach(entry => {
       if (!entry.isIntersecting) return;
-      entry.target.classList.remove('title-reveal-pending');
-      entry.target.classList.add('title-reveal-visible');
+      const kind = revealClass(entry.target);
+      entry.target.classList.remove(kind + '-pending');
+      entry.target.classList.add(kind + '-visible');
       titleObserver.unobserve(entry.target);
     });
-  }, { threshold: 0.15 });
-  sectionTitles.forEach(title => {
-    if (title.classList.contains('title-reveal-visible')) return;
-    // Observe visible geometry: clipping this element prevents intersection.
-    title.classList.remove('title-reveal-pending');
-    titleObserver.observe(title);
+  }, { rootMargin: '0px 0px -22% 0px' });
+  items.forEach(el => {
+    const kind = revealClass(el);
+    if (el.classList.contains(kind + '-visible')) return;
+    // Opacity only: hidden elements keep their geometry, so they still intersect.
+    el.classList.add(kind + '-pending');
+    titleObserver.observe(el);
   });
 }
 setupTitleReveals();

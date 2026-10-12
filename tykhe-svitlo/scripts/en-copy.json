@@ -119,15 +119,11 @@
 "Змінити відповіді":"Edit answers",
 "ПОРТФОЛІО":"PORTFOLIO",
 "ПРИКЛАДИ ЗЙОМОК":"SAMPLE SESSIONS",
-"Портрети, зйомки для двох і творчі кадри. Обери формат, щоб подивитися лише його.":"Portraits, sessions for two and creative frames. Pick a format to see only that.",
 "Формат зйомки":"Session format",
 "Усі":"All",
 "Індивідуальна":"Individual",
 "Для двох":"For two",
 "Творча":"Creative",
-"ІНДИВІДУАЛЬНА":"INDIVIDUAL",
-"ДЛЯ ДВОХ":"FOR TWO",
-"ТВОРЧА":"CREATIVE",
 "Прогулянка оливковим садом":"A walk in the olive grove",
 "Індивідуальна зйомка — прогулянка оливковим садом":"Individual session — a walk in the olive grove",
 "Руки й кала крупним планом":"Hands and a calla, close up",
@@ -143,5 +139,10 @@
 "Пара в оливковому саду":"A couple in the olive grove",
 "Love story — пара в оливковому саду":"Love story — a couple in the olive grove",
 "Предметна зйомка":"Product shoot",
-"Творча зйомка — предметна зйомка":"Creative session — product shoot"
+"Творча зйомка — предметна зйомка":"Creative session — product shoot",
+"Портрети, love story та творчі зйомки.":"Portraits, love stories and creative sessions.",
+"Подивись, яка з них — про тебе.":"See which one feels like you.",
+"Індивідуальна зйомка":"Individual session",
+"Зйомка для двох":"Session for two",
+"Творча зйомка":"Creative session"
 }
