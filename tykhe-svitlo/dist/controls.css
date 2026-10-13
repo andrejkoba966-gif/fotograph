@@ -161,3 +161,8 @@ footer .footer-bottom { align-items: center; }
 .hero-specialty, html[lang="en"] .hero-specialty { font-size: clamp(20px, 2.4vw, 42px); letter-spacing: -.04em; }
 @media (max-width: 1000px) { .hero-specialty, html[lang="en"] .hero-specialty { font-size: 3.6vw; } }
 @media (max-width: 700px) { .hero-specialty, html[lang="en"] .hero-specialty { font-size: 5.4vw; line-height: 1.25; } }
+
+/* Manifesto as a rounded card, like the sections below it */
+.manifesto { margin-left: 26px; margin-right: 26px; border-radius: 36px; padding: clamp(32px,5vw,76px); }
+@media (min-width: 1700px) { .manifesto { margin-left: auto; margin-right: auto; } }
+@media (max-width: 700px) { .manifesto { margin-left: 12px; margin-right: 12px; border-radius: 26px; padding: 26px 16px 32px; } }
